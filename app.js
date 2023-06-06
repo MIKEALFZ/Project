@@ -14,7 +14,7 @@ app.set('view engine','handlebars');
 //Routes
 app.get(
     '/',(req,res)=>{
-        res.render('index',{title:'Home'})
+        res.render('index',{title:'Home',js:'from.js'})
 });
 
 app.listen(8080,()=>{

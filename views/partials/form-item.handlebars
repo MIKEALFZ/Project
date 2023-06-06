@@ -1,24 +1,24 @@
 <div class="form-container">
-    <form action="/printData" method='POST'>
-        <div class="form-item">
+    <form onsubmit="return validateForm(this);" id="myform">
+        <div class="form-item-name" id="name-div">
             <label class="form-item-title" for="name">Όνομα</label>
             <input class="form-item-input" type="text" name="name" id="name" placeholder="Όνομα"
                    pattern="[Α-Ωα-ωίϊΐόάέύϋΰήώ]+"
                    title = "Συμπληρώστε μόνο με ελληνικούς χαρακτήρες"
                    required>
         </div>
-        <div class="form-item">
+        <div class="form-item" id="address-div">
             <label class="form-item-title" for="street">Διεύθυνση</label>
             <input class="form-item-input" type="text" name="street" id="street" placeholder="Παπάγου 70"
                    pattern="[Α-Ωα-ωίϊΐόάέύϋΰήώ]+"
                    title = "Συμπληρώστε μόνο με ελληνικούς χαρακτήρες"
                    required>
         </div>
-        <div class="form-item">
+        <div class="form-item" id="email-div">
             <label class="form-item-title" for="email">Email</label>
             <input class="form-item-input" type="email" name="email" id="email" placeholder="john123@gmail.com" required>
         </div>
-        <div class="form-item">
+        <div class="form-item" id="country-div">
             <label class="form-item-title" for="country">Χώρα</label>
             <select class="form-select" id="country" name="country">
                 <option value="AF">Afghanistan</option>
@@ -275,17 +275,17 @@
                 <option value="ZW">Zimbabwe</option>
             </select>
         </div>
-        <div class="form-item">
+        <div class="form-item" id="tk-div">
             <label class="form-item-title" for="tk">Τ.Κ.</label>
             <input class="form-item-input" maxlength='5' type="number" name="tk" id="tk" placeholder="55522"
 
                    required>
         </div>
-        <div class="form-item">
+        <div class="form-item" id="phone-div">
             <label class="form-item-title" for="phone">Τηλέφωνο</label>
-            <input class="form-item-input" type="text" name="phone" id="phone" placeholder="+302101234567" required>
+            <input class="form-item-input" pattern="[0-9+]+" type="text" name="phone" id="phone" placeholder="+302101234567" required>
         </div>
-        <div class="form-item">
+        <div class="form-item-card">
             <label class="form-item-title" for="card">Πιστωτική κάρτα</label>
             <div>
                 <input type="radio" id="visa" name="card-type" value="VS" checked="checked">
@@ -299,6 +299,7 @@
         </div>
         <div><br>
             <input type="submit" class="form-button" value ="Εκτύπωση">
+            <input type="button" onclick="clearForm()" value="Reset">
         </div>
     </form>
 </div>
