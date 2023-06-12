@@ -39,37 +39,17 @@ function validateForm(){
         return false;
     }
     else{
-        // var form1 = document.getElementById("myform-print");
         var form_print = document.getElementById("myform-print");
         // Save placeholder
-        // var name_placeholder = form1.name.placeholder;
-        // var street_placeholder = form1.street.placeholder;
-        // var email_placeholder = form1.email.placeholder;
-        // var tk_placeholder = form1.tk.placeholder;
-        // var phone_placeholder = form1.phone.placeholder;
-        // var card_placeholder = form1.card.placeholder;
-        // Change placeholder to value
-        form_print.name.placeholder = form.name.value;
-        form_print.street.placeholder = form.street.value;
-        form_print.email.placeholder = form.email.value;
-        form_print.tk.placeholder = form.tk.value;
-        form_print.phone.placeholder = form.phone.value;
-        // var name_div = document.getElementById("name-div");
-        // var address_div = document.getElementById("address-div");
-        // var email_div = document.getElementById("email-div");
-        // var tk_div = document.getElementById("tk-div");
-        // var phone_div = document.getElementById("phone-div");
+        form_print.name1.placeholder = form.name.value;
+        form_print.street1.placeholder = form.street.value;
+        form_print.email1.placeholder = form.email.value;
+        form_print.tk1.placeholder = form.tk.value;
+        form_print.phone1.placeholder = form.phone.value;
         newwin = window.open()
         newwin.document.write(form_print.outerHTML);
         newwin.print();
         newwin.close();
-        // Change to default placeholder
-        // form1.name.placeholder = name_placeholder;
-        // form1.street.placeholder = street_placeholder;
-        // form1.email.placeholder = email_placeholder;
-        // form1.tk.placeholder = tk_placeholder;
-        // form1.phone.placeholder = phone_placeholder;
-        // form1.card.placeholder = card_placeholder;
         return true;
     }
 }
